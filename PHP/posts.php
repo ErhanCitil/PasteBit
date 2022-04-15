@@ -1,8 +1,8 @@
 <!-- PHP Begin -->
 <?php
 // Includes
-// include_once './SQL/db_connect.php';
-// include_once './SQL/queries.php';
+include_once '../SQL/db_connect.php';
+// include_once '../SQL/queries.php';
 
 ?>
 <!-- PHP END -->

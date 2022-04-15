@@ -1,7 +1,7 @@
 <!-- PHP Begin -->
 <?php
 // Includes
-// include_once './SQL/db_connect.php';
+include_once './SQL/db_connect.php';
 // include_once './SQL/queries.php';
 
 ?>
@@ -39,12 +39,11 @@
         </article>
 
         <article id="landing-form">
-            <form action="./PHP/create.php" method="POST">
-                <textarea name="code" id="code" cols="30" rows="10" placeholder="Typ hier je code"></textarea>
-                <input type="submit" value="Plak je code">
+            <form method="POST" id="pasteBinPost">
+                <textarea class="pasteBinText" placeholder="Typ of plak hier uw code"></textarea>
             </form>
-
-
+            <input type="submit" value="Paste!">
+        </article>
     </section>
 </body>
 
