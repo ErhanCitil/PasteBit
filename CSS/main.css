@@ -35,13 +35,11 @@ body {
 
 }
 
-/* width */
 ::-webkit-scrollbar {
     width: 0px;
 }
 
-/*Class landing display flex centered*/
-.landing {
+.landing, header {
     display: flex;
     justify-content: center;
     align-items: center;
