@@ -15,19 +15,24 @@ body {
 .pasteBinText {
     outline: none;
     overflow: auto;
+    border: 1px solid #eee;
     box-shadow: 1px 1px 0 #ddd;
+    vertical-align: top;
     font-family: 'Reenie Beanie', cursive;
     font-size: 24px;
     line-height: 20px;
+    margin: 2% auto;
     padding: 22px 20px 30vh 1vw;
     resize: none;
     min-height: 50vh;
-    min-width: 40vw;
+    width: 50vw;
     background-color: #fff;
     border-color: #ccc;
     background-image: -webkit-linear-gradient(top, transparent, transparent 19px, #e7eff8 0), -webkit-radial-gradient(3.9% 46%, circle closest-corner, transparent, transparent 43.5%, transparent 0%);
     background-size: 100% 20px;
+    background-position: 0 0;
     border-radius: 10px;
+
 }
 
 /* width */
