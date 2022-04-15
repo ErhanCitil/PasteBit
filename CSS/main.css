@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
+
 
 html {
     margin: 0;
@@ -18,7 +20,7 @@ body {
     border: 1px solid #eee;
     box-shadow: 1px 1px 0 #ddd;
     vertical-align: top;
-    font-family: 'Indie Flower', cursive;
+    font-family: 'Caveat', cursive;
     font-size: 24px;
     line-height: 20px;
     margin: 2% auto;
@@ -45,3 +47,4 @@ body {
     align-items: center;
     flex-direction: column;
 }
+
