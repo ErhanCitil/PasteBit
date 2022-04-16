@@ -61,7 +61,7 @@ $password = generateUrl();
             <form method="POST" id="pasteBinPost">
                 <textarea class="pasteBinText" placeholder="Typ of plak hier uw code"></textarea>
             </form>
-            <?= $url; ?>
+            <p>URL = <?= $url; ?> </p>
         </article>
     </section>
 
