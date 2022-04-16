@@ -3,9 +3,10 @@
 // Includes
 include_once './SQL/db_connect.php';
 // include_once './SQL/queries.php';
-include_once './PHP/functions/url_generator.php';
+include './PHP/functions/url_generator.php';
 // Url generator
 $url = generateUrl();
+$password = generateUrl();
 
 ?>
 
@@ -91,7 +92,7 @@ $url = generateUrl();
                 <option value="MySQL">MySQL</option>
             </select>
 
-            <input type="password" name="" class="mt-7 text-base leading-5 font-bold" id="">
+            <input type="text" name="password" value="<?= $password ?>" placeholder="Vul een wachtwoord in" class="mt-7 text-base leading-5 font-bold" id="">
 
             <input type="text" name="" class="mt-5 text-base mb-2.5 leading-5 font-bold" id="">
         </div>
