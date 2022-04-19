@@ -103,4 +103,12 @@ input:checked+.slider:before {
 }
 #password {
     display: none;
+<<<<<<< HEAD
+=======
+}
+
+.logo {
+    width: 200px;
+    margin-top: 5px;
+>>>>>>> logo-toeveogen
 }

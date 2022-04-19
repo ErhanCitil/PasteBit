@@ -34,6 +34,7 @@ $datum = datum();
 
         <div class="mb-2 sm:mb-0 flex flex-row">
 
+<<<<<<< HEAD
             <div class="h-10 w-10 self-center mr-2">
                 <img class="h-10 w-10 self-center" src="" alt="PasteBit Logo">
             </div>
@@ -41,6 +42,10 @@ $datum = datum();
             <div>
                 <a href="./index.php" class="text-2xl no-underline text-grey-darkest hover:text-blue-dark font-sans font-bold">PasteBit</a><br>
                 <span class="text-xs text-grey-dark">Delen doe je hier!</span>
+=======
+            <div class="h-10  self-center mr-2">
+                <img class="logo" src="img/logo.png" alt="PasteBit Logo">
+>>>>>>> logo-toeveogen
             </div>
 
         </div>
