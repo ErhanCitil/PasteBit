@@ -32,9 +32,26 @@ include_once '../SQL/db_connect.php';
         </nav>
     </header>
     <section class="landing">
+
         <article id="landing-header">
-            <h1>Open Source</h1>
-            <p>Overzicht van licenties en Open Source onderdelen</p>
+            <h1>Overzicht van licenties en Open Source onderdelen</h1>
+        </article>
+
+        <article id="landing-header">
+            <h2>Licenties</h2>
+            <p>Licenties die gebruikt worden in deze website</p>
+        </article>
+
+        <article id="landing-header">
+            <h2>Open Source</h2>
+            <p>Open Source onderdelen die gebruikt worden in deze website</p>
+            <h3>Design</h3>
+            <ol>
+                <a href="https://codepen.io/AllThingsSmitty/pen/MmxxOz/">Radio button</a>
+            </ol>
+            <h3>Fonts</h3>
+            <ol>
+                <a href="https://fonts.google.com/specimen/Caveat">Caveat</a>
         </article>
 
 

@@ -73,7 +73,7 @@ $datum = datum();
                     <div class="float-left h-7">
                         <h4 class="mt-2.5 font-bold leading-5 text-base mb-2.5">Welke taal?</h4>
                         <h4 class="mt-7 text-base mb-2.5 leading-5 font-bold">Titel</h4>
-                        <h4 class="mt-7 text-base mb-2.5 leading-5 font-bold" name="wachtwoord">Wachtwoord</h4>
+                        <h4 class="mt-7 text-base mb-2.5 leading-5 font-bold" name="wachtwoord">Wachtwoord?</h4>
                         <p class="mb-2.5"> </p>
                     </div>
 
@@ -88,6 +88,10 @@ $datum = datum();
                         </select>
 
                         <input type="text" name="titel" placeholder="Geef een titel aan" class="mt-5 text-base mb-2.5 leading-5 font-bold" required>
+                        <label class="switch" for="checkbox">
+                            <input type="checkbox" id="checkbox" />
+                            <div class="slider round"></div>
+                        </label>
                         <input type="text" name="wachtwoord" value="<?= $password ?>" placeholder="Vul een wachtwoord in" class="mt-7 text-base leading-5 font-bold" id="">
                         <input type="text" hidden name="url" value="<?= $url ?>">
                         <input type="text" hidden name="datum" value="<?= $datum ?>">
@@ -100,7 +104,6 @@ $datum = datum();
         </article>
 
     </section>
-
 </body>
 
 </html>
