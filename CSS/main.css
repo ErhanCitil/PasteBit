@@ -48,11 +48,6 @@ body {
     flex-direction: column;
 }
 
-.logo {
-    width: 200px;
-    margin-top: 5px;
-}
-
 .switch {
     display: inline-block;
     height: 34px;
@@ -103,12 +98,10 @@ input:checked+.slider:before {
 }
 #password {
     display: none;
-<<<<<<< HEAD
-=======
+
 }
 
 .logo {
     width: 200px;
     margin-top: 5px;
->>>>>>> logo-toeveogen
 }

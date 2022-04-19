@@ -20,12 +20,13 @@ $datum = datum();
 <html lang="en">
 
 <head>
-    <title>PasteBit</title>
-    <link rel="stylesheet" href="CSS/main.css">
-    <link rel="icon" href="img/icon.png" type="image/png" />
-    <link rel="shortcut icon" type="image/png" href="./img/icon.png">
-    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/main.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <title>PasteBit</title>
+    <!-- favicon komen later -->
     <!-- OG-tags komen later -->
 </head>
 
@@ -34,18 +35,8 @@ $datum = datum();
 
         <div class="mb-2 sm:mb-0 flex flex-row">
 
-<<<<<<< HEAD
-            <div class="h-10 w-10 self-center mr-2">
-                <img class="h-10 w-10 self-center" src="" alt="PasteBit Logo">
-            </div>
-
-            <div>
-                <a href="./index.php" class="text-2xl no-underline text-grey-darkest hover:text-blue-dark font-sans font-bold">PasteBit</a><br>
-                <span class="text-xs text-grey-dark">Delen doe je hier!</span>
-=======
-            <div class="h-10  self-center mr-2">
+            <div class="h-10 self-center mr-2">
                 <img class="logo" src="img/logo.png" alt="PasteBit Logo">
->>>>>>> logo-toeveogen
             </div>
 
         </div>
