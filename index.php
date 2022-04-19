@@ -29,8 +29,10 @@ if (isset($_POST['taal'])) {
     $update = $db->query($sqlUpdate);
     if ($update) {
         echo '<script>alert("Paste is geplaatst!")</script>';
+        echo "<meta http-equiv='refresh' content='0'>";
     } else {
         echo '<script>alert("Paste is niet geplaatst!")</script>';
+        echo "<meta http-equiv='refresh' content='0'>";
     }
 }
 
