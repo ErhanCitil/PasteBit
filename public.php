@@ -2,22 +2,19 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PasteBit | Public</title>
+    <link rel="stylesheet" href="CSS/main.css">
+    <link rel="icon" href="img/icon.png" type="image/png" />
+    <link rel="shortcut icon" type="image/png" href="./img/icon.png">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
     <nav class="font-sans flex flex-col text-center content-center sm:flex-row sm:text-left sm:justify-between py-2 px-6 bg-white shadow sm:items-baseline w-full">
         <div class="mb-2 sm:mb-0 flex flex-row">
-            <div class="h-10 w-10 self-center mr-2">
-                <img class="h-10 w-10 self-center" src="">
-            </div>
-            <div>
-                <a href="/" class="text-2xl no-underline text-grey-darkest hover:text-blue-dark font-sans font-bold">PasteBit</a><br>
-                <span class="text-xs text-grey-dark">Delen doe je hier!</span>
+            <div class="h-10 self-center mr-2">
+                <img class="logo" src="img/logo.png">
             </div>
         </div>
 
