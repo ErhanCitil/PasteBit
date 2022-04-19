@@ -94,7 +94,7 @@ $password = generateUrl();
 
             <input type="text" name="password" value="<?= $password ?>" placeholder="Vul een wachtwoord in" class="mt-7 text-base leading-5 font-bold" id="">
 
-            <input type="text" name="" class="mt-5 text-base mb-2.5 leading-5 font-bold" id="">
+            <input type="text" name="titel" placeholder="Geef een titel aan" class="mt-5 text-base mb-2.5 leading-5 font-bold" id="">
         </div>
     </div>
 
