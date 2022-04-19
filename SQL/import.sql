@@ -9,7 +9,6 @@ CREATE TABLE `posts` (
     `taal` ENUM('HTML','CSS','PHP','SQL') NOT NULL,
     `titel` VARCHAR(255) NOT NULL,
     `code` TEXT NOT NULL,
-    `lines` BIGINT NOT NULL,
     `datum` DATE NOT NULL,
     `wachtwoord` VARCHAR(255) NULL,
     `url` VARCHAR(10) NOT NULL
