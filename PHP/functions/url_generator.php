@@ -1,6 +1,7 @@
 <?php
-function generateUrl($length = 10)
+function generateUrl()
 {
+    $length = 10;
     $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
     $charactersLength = strlen($characters);
     $randomString = '';
@@ -8,4 +9,5 @@ function generateUrl($length = 10)
         $randomString .= $characters[rand(0, $charactersLength - 1)];
     }
     $url =  $randomString;
+    return $url;
 }
