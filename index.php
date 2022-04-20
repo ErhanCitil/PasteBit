@@ -9,7 +9,7 @@ include './PHP/functions/datum.php';
 // Variables
 $url = generateUrl();
 $password = generateUrl();
-$datum = datum();
+$datum = date("Y-m-d H:i:s");
 ?>
 
 <!-- PHP END -->
