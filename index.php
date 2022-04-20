@@ -20,12 +20,14 @@ $datum = datum();
 <html lang="en">
 
 <head>
-    <title>PasteBit</title>
-    <link rel="stylesheet" href="CSS/main.css">
-    <link rel="icon" href="img/icon.png" type="image/png" />
-    <link rel="shortcut icon" type="image/png" href="./img/icon.png">
-    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/main.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <title>PasteBit</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <!-- favicon komen later -->
     <!-- OG-tags komen later -->
 </head>
 
@@ -34,25 +36,15 @@ $datum = datum();
 
         <div class="mb-2 sm:mb-0 flex flex-row">
 
-<<<<<<< HEAD
-            <div class="h-10 w-10 self-center mr-2">
-                <img class="h-10 w-10 self-center" src="" alt="PasteBit Logo">
-            </div>
-
-            <div>
-                <a href="./index.php" class="text-2xl no-underline text-grey-darkest hover:text-blue-dark font-sans font-bold">PasteBit</a><br>
-                <span class="text-xs text-grey-dark">Delen doe je hier!</span>
-=======
-            <div class="h-10  self-center mr-2">
-                <img class="logo" src="img/logo.png" alt="PasteBit Logo">
->>>>>>> logo-toeveogen
+            <div class="h-10 self-center mr-2">
+                <a href="#"><img class="logo" src="img/logo.png" alt="PasteBit Logo"></a>
             </div>
 
         </div>
 
         <div class="sm:mb-0 self-center">
             <a href="./index.php" class="text-md no-underline text-black hover:text-blue-dark ml-2 px-1 hover:bg-gray-200 transition duration-500 hover:scale-125">Home</a>
-            <a href="./PHP/posts.php" class="text-md no-underline text-grey-darker hover:text-blue-dark ml-2 px-1 hover:bg-gray-200 transition duration-500 hover:scale-125">Public</a>
+            <a href="public.php" class="text-md no-underline text-grey-darker hover:text-blue-dark ml-2 px-1 hover:bg-gray-200 transition duration-500 hover:scale-125">Public</a>
             <a href="./PHP/project.php" class="text-md no-underline text-black hover:text-blue-dark ml-2 px-1 hover:bg-gray-200 transition duration-500 hover:scale-125">Project PasteBit</a>
             <a href="./PHP/legaal.php" class="text-md no-underline text-black hover:text-blue-dark ml-2 px-1 hover:bg-gray-200 transition duration-500 hover:scale-125">Licenties</a>
         </div>
@@ -93,10 +85,10 @@ $datum = datum();
 
                         <input type="text" name="titel" placeholder="Geef een titel aan" class="mt-5 text-base mb-2.5 leading-5 font-bold" required>
                         <label class="switch" for="checkbox">
-                            <input type="checkbox" id="checkbox" onclick='passwordAan()' />
+                            <input type="checkbox" id="checkbox" onclick='passwordAan()'/>
                             <div class="slider round"></div>
                         </label>
-                        <input type="text" name="wachtwoord" id="password" value="<?= $password ?>" placeholder="Vul een wachtwoord in" class="mt-7 text-base leading-5 font-bold" id="">
+                        <input type="text" name="wachtwoord" id="password" value="" placeholder="Vul een wachtwoord in" class="mt-7 text-base leading-5 font-bold" id="">
                         <input type="text" hidden name="url" value="<?= $url ?>">
                         <input type="text" hidden name="datum" value="<?= $datum ?>">
                         <input type="submit" value="paste" class="bg-gray-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
