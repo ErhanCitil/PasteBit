@@ -72,7 +72,7 @@ include './PHP/functions/datum.php';
                                         <i class="fa fa-calendar-o"></i> <?php echo $item['datum'] ?>
                                     </li>
                                 </ul>
-                                <pre><code class="<?php echo $item['taal'] ?>"><?php echo $item['code'] ?></code></pre>
+                                <pre><code class="<?php echo $item['taal'] ?>"><xmp><?php echo $item['code'] ?></xmp></code></pre>
                             </div>
                         </div>
                     </div>

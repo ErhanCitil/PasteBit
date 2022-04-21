@@ -55,7 +55,7 @@ include './PHP/functions/datum.php';
 
         <article id="landing">
             <?php
-            $aute = $db->query("SELECT * FROM `posts` ORDER BY `posts`.`datum` DESC");
+            $aute = $db->query("SELECT * FROM `posts` where `wachtwoord` = '' ORDER BY `posts`.`datum` DESC");
             while ($item = $aute->fetch()) {
             ?>
 
@@ -78,7 +78,7 @@ include './PHP/functions/datum.php';
                                             <i class="fa fa-calendar-o"></i> <?php echo $item['datum'] ?>
                                         </li>
                                     </ul>
-                                    <pre><code class="<?php echo $item['taal'] ?>"><?php echo $item['code'] ?></code></pre><br>
+                                    <pre><code class="<?php echo $item['taal'] ?>"><xmp><?php echo $item['code'] ?></xmp></code></pre><br>
                                     <a href="view.php?url=<?php echo $item['url'] ?>" class="les-meer">Les meer</a>
                                 </div>
                             </div>
