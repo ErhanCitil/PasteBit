@@ -91,7 +91,7 @@ $datum = date("Y-m-d H:i:s");
                         <input type="text" name="wachtwoord" id="password" value="" placeholder="Geef een wachtwoord" class="mt-7 text-base leading-5 font-bold ibmText" id="">
                         <input type="text" hidden name="url" value="<?= $url ?>">
                         <input type="text" hidden name="datum" value="<?= $datum ?>">
-                        <input type="submit" value="paste" class="bg-gray-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+                        <input type="submit" value="paste" class="bg-gray-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full ibmText">
                     </div>
 
                 </div>
