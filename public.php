@@ -55,7 +55,7 @@ include './PHP/functions/datum.php';
 
         <article id="landing">
             <?php
-            $aute = $db->query("SELECT * FROM `posts` ORDER BY `posts`.`datum` DESC");
+            $aute = $db->query("SELECT * FROM `posts` where `wachtwoord` = '' ORDER BY `posts`.`datum` DESC");
             while ($item = $aute->fetch()) {
             ?>
 

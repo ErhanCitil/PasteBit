@@ -62,7 +62,7 @@ $datum = date("Y-m-d H:i:s");
         <article id="landing-form">
             <form method="POST" id="pasteBinPost" action="index.php">
 
-                <textarea id="code" name="code" class="pasteBinText" placeholder="Typ of plak hier uw code"></textarea>
+                <textarea id="code" name="code" class="pasteBinText" placeholder="Typ of plak hier uw code"><</textarea>
 
                 <div class="mt-16 mb-16 w-full flex ml-10">
 
