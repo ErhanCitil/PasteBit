@@ -42,7 +42,7 @@ $datum = date("Y-m-d H:i:s");
 
         </div>
 
-        <div class="sm:mb-0 self-center">
+        <div class="sm:mb-0 self-center ibmText">
             <a href="./index.php" class="text-md no-underline text-black hover:text-blue-dark ml-2 px-1 hover:bg-gray-200 transition duration-500 hover:scale-125">Home</a>
             <a href="public.php" class="text-md no-underline text-grey-darker hover:text-blue-dark ml-2 px-1 hover:bg-gray-200 transition duration-500 hover:scale-125">Public</a>
             <a href="./PHP/project.php" class="text-md no-underline text-black hover:text-blue-dark ml-2 px-1 hover:bg-gray-200 transition duration-500 hover:scale-125">Project PasteBit</a>
@@ -55,8 +55,8 @@ $datum = date("Y-m-d H:i:s");
     <section class="landing pt-6">
 
         <article id="landing-header">
-            <h1>Welkom bij PasteBit!</h1>
-            <p>PasteBit is een platform waarmee je eenvoudig je code online met anderen kan delen.</p>
+            <h1 class="ibmHeader">Welkom bij PasteBit!</h1>
+            <p class="ibmText">PasteBit is een platform waarmee je eenvoudig je code online met anderen kan delen.</p>
         </article>
 
         <article id="landing-form">
@@ -67,15 +67,15 @@ $datum = date("Y-m-d H:i:s");
                 <div class="mt-16 mb-16 w-full flex ml-10">
 
                     <div class="float-left h-7">
-                        <h4 class="mt-2.5 font-bold leading-5 text-base mb-2.5">Welke taal?</h4>
-                        <h4 class="mt-7 text-base mb-2.5 leading-5 font-bold">Titel</h4>
-                        <h4 class="mt-7 text-base mb-2.5 leading-5 font-bold" name="wachtwoord">Wachtwoord?</h4>
+                        <h4 class="mt-2.5 font-bold leading-5 text-base mb-2.5 ibmHeader">Welke taal?</h4>
+                        <h4 class="mt-7 text-base mb-2.5 leading-5 font-bold ibmHeader">Titel</h4>
+                        <h4 class="mt-7 text-base mb-2.5 leading-5 font-bold ibmHeader" name="wachtwoord">Wachtwoord?</h4>
                         <p class="mb-2.5"> </p>
                     </div>
 
                     <div class="block float-right box-border pl-5 flex flex-col">
 
-                        <select class="h-10 border-solid border-2 border-gray-500" name="taal" required>
+                        <select class="h-10 border-solid border-2 border-gray-500 ibmText" name="taal" required>
                             <option value="">Selecteer een optie</option>
                             <option value="HTML">HTML</option>
                             <option value="CSS">CSS</option>
@@ -83,12 +83,12 @@ $datum = date("Y-m-d H:i:s");
                             <option value="SQL">MySQL</option>
                         </select>
 
-                        <input type="text" name="titel" placeholder="Geef een titel aan" class="mt-5 text-base mb-2.5 leading-5 font-bold" required>
+                        <input type="text" name="titel" placeholder="Geef een titel aan" class="mt-5 text-base mb-2.5 leading-5 font-bold ibmText" required>
                         <label class="switch" for="checkbox">
-                            <input type="checkbox" id="checkbox" onclick='passwordAan()'/>
+                            <input type="checkbox" id="checkbox" onclick='passwordAan()' />
                             <div class="slider round"></div>
                         </label>
-                        <input type="text" name="wachtwoord" id="password" value="" placeholder="Vul een wachtwoord in" class="mt-7 text-base leading-5 font-bold" id="">
+                        <input type="text" name="wachtwoord" id="password" value="" placeholder="Geef een wachtwoord" class="mt-7 text-base leading-5 font-bold ibmText" id="">
                         <input type="text" hidden name="url" value="<?= $url ?>">
                         <input type="text" hidden name="datum" value="<?= $datum ?>">
                         <input type="submit" value="paste" class="bg-gray-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">

@@ -37,7 +37,7 @@ include './PHP/functions/datum.php';
 
         </div>
 
-        <div class="sm:mb-0 self-center">
+        <div class="sm:mb-0 self-center ibmText">
             <a href="./index.php" class="text-md no-underline text-black hover:text-blue-dark ml-2 px-1 hover:bg-gray-200 transition duration-500 hover:scale-125">Home</a>
             <a href="public.php" class="text-md no-underline text-grey-darker hover:text-blue-dark ml-2 px-1 hover:bg-gray-200 transition duration-500 hover:scale-125">Public</a>
             <a href="./PHP/project.php" class="text-md no-underline text-black hover:text-blue-dark ml-2 px-1 hover:bg-gray-200 transition duration-500 hover:scale-125">Project PasteBit</a>
@@ -50,7 +50,7 @@ include './PHP/functions/datum.php';
     <section class="landing pt-6">
 
         <article id="landing-head">
-            <h1>Public</h1>
+            <h1 class="ibmHeader">Public</h1>
         </article>
 
         <article id="landing">
@@ -59,7 +59,7 @@ include './PHP/functions/datum.php';
             while ($item = $aute->fetch()) {
             ?>
 
-                <div class="container mb80">
+                <div class="container mb80 ibmText">
                     <div class="page-timeline">
                         <div class="vtimeline-point">
                             <div class="vtimeline-icon">
@@ -94,7 +94,8 @@ include './PHP/functions/datum.php';
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
     <script>
         hljs.highlightAll();
-    </script></body>
+    </script>
+</body>
 
 </html>
 
