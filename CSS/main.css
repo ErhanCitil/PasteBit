@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Caveat&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap');
 
 html {
   margin: 0;
@@ -252,4 +253,16 @@ h3 {
 
 .les-meer:hover {
     color: #000;
+}
+
+.ibmText {
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.ibmHeader {
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 500;
+    font-size: 24px;
 }
