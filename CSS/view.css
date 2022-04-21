@@ -247,22 +247,23 @@ h3 {
 }
 
 
-.list-inline-item, .les-meer {
-    color: #57be8e;
+.list-inline-item,
+.les-meer {
+  color: #57be8e;
 }
 
 .les-meer:hover {
-    color: #000;
+  color: #000;
 }
 
 .ibmText {
-    font-family: 'IBM Plex Mono', monospace;
-    font-weight: 400;
-    font-size: 14px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 400;
+  font-size: 14px;
 }
 
 .ibmHeader {
-    font-family: 'IBM Plex Mono', monospace;
-    font-weight: 500;
-    font-size: 24px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 500;
+  font-size: 24px;
 }

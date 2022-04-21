@@ -38,7 +38,7 @@ include './PHP/functions/datum.php';
 
         </div>
 
-        <div class="sm:mb-0 self-center">
+        <div class="sm:mb-0 self-center ibmText">
             <a href="./index.php" class="text-md no-underline text-black hover:text-blue-dark ml-2 px-1 hover:bg-gray-200 transition duration-500 hover:scale-125">Home</a>
             <a href="public.php" class="text-md no-underline text-grey-darker hover:text-blue-dark ml-2 px-1 hover:bg-gray-200 transition duration-500 hover:scale-125">Public</a>
             <a href="./PHP/project.php" class="text-md no-underline text-black hover:text-blue-dark ml-2 px-1 hover:bg-gray-200 transition duration-500 hover:scale-125">Project PasteBit</a>
@@ -53,7 +53,7 @@ include './PHP/functions/datum.php';
             $aute = $db->query("SELECT * FROM `posts` WHERE url = '" . $_GET['url'] . "'");
             $item = $aute->fetch();
             ?>
-            <div class="container mb80">
+            <div class="container mb80 ibmText">
                 <div class="page-timeline">
                     <div class="vtimeline-point">
                         <div class="vtimeline-icon">
