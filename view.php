@@ -5,6 +5,7 @@ include_once './SQL/db_connect.php';
 include './SQL/queries.php';
 include './PHP/functions/url_generator.php';
 include './PHP/functions/datum.php';
+
 ?>
 
 <!-- PHP END -->
@@ -18,12 +19,12 @@ include './PHP/functions/datum.php';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./CSS/main.css">
+    <link rel="stylesheet" href="./CSS/view.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <title>PasteBit | Public</title>
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/arduino-light.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/arta.min.css">
 </head>
 
 <body>
@@ -32,7 +33,7 @@ include './PHP/functions/datum.php';
         <div class="mb-2 sm:mb-0 flex flex-row">
 
             <div class="h-10 self-center mr-2">
-                <a href="#"><img class="logo" src="img/logo.png" alt="PasteBit Logo" class=""></a>
+                <a href="#"><img class="logo" src="img/logo.png" alt="PasteBit Logo"></a>
             </div>
 
         </div>
@@ -46,55 +47,46 @@ include './PHP/functions/datum.php';
 
     </nav>
 
-
     <section class="landing pt-6">
-
-        <article id="landing-head">
-            <h1 class="ibmHeader">Public</h1>
-        </article>
-
         <article id="landing">
             <?php
-            $aute = $db->query("SELECT * FROM `posts` where `wachtwoord` = '' ORDER BY `posts`.`datum` DESC");
-            while ($item = $aute->fetch()) {
+            $aute = $db->query("SELECT * FROM `posts` WHERE url = '" . $_GET['url'] . "'");
+            $item = $aute->fetch();
             ?>
-
-                <div class="container mb80 ibmText">
-                    <div class="page-timeline">
-                        <div class="vtimeline-point">
-                            <div class="vtimeline-icon">
-                                <i class="fa fa-code" aria-hidden="true"></i>
-                            </div>
-                            <div class="vtimeline-block">
-                                <div class="vtimeline-content">
-                                    <a href="view.php?url=<?php echo $item['url'] ?>">
-                                        <h3><?php echo $item['titel'] ?></h3>
-                                    </a>
-                                    <ul class="post-meta list-inline">
-                                        <li class="list-inline-item">
-                                            <i class="fa fa-code"></i> <?php echo $item['taal'] ?>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <i class="fa fa-calendar-o"></i> <?php echo $item['datum'] ?>
-                                        </li>
-                                    </ul>
-                                    <pre><code class="<?php echo $item['taal'] ?>"><xmp><?php echo $item['code'] ?></xmp></code></pre><br>
-                                    <a href="view.php?url=<?php echo $item['url'] ?>" class="les-meer">Lees meer</a>
-                                </div>
+            <div class="container mb80 ibmText">
+                <div class="page-timeline">
+                    <div class="vtimeline-point">
+                        <div class="vtimeline-icon">
+                            <i class="fa fa-code" aria-hidden="true"></i>
+                        </div>
+                        <div class="vtimeline-block">
+                            <div class="vtimeline-content">
+                                <a href="view.php?url=<?php echo $item['url'] ?>">
+                                    <h3><?php echo $item['titel'] ?></h3>
+                                </a>
+                                <ul class="post-meta list-inline">
+                                    <li class="list-inline-item">
+                                        <i class="fa fa-code"></i> <?php echo $item['taal'] ?>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <i class="fa fa-calendar-o"></i> <?php echo $item['datum'] ?>
+                                    </li>
+                                </ul>
+                                <pre><code class="<?php echo $item['taal'] ?>"><xmp><?php echo $item['code'] ?></xmp></code></pre>
                             </div>
                         </div>
                     </div>
                 </div>
-            <?php
-            }
-            ?>
-
+            </div>
         </article>
+
+
     </section>
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
     <script>
         hljs.highlightAll();
     </script>
+
 </body>
 
 </html>
