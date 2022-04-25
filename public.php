@@ -32,7 +32,7 @@ include './PHP/functions/datum.php';
         <div class="mb-2 sm:mb-0 flex flex-row">
 
             <div class="h-10 self-center mr-2">
-                <a href="#"><img class="logo" src="img/logo.png" alt="PasteBit Logo"></a>
+                <a href="#"><img class="logo" src="img/logo.png" alt="PasteBit Logo" class=""></a>
             </div>
 
         </div>
@@ -79,7 +79,7 @@ include './PHP/functions/datum.php';
                                         </li>
                                     </ul>
                                     <pre><code class="<?php echo $item['taal'] ?>"><xmp><?php echo $item['code'] ?></xmp></code></pre><br>
-                                    <a href="view.php?url=<?php echo $item['url'] ?>" class="les-meer">Les meer</a>
+                                    <a href="view.php?url=<?php echo $item['url'] ?>" class="les-meer">Lees meer</a>
                                 </div>
                             </div>
                         </div>

@@ -83,7 +83,7 @@ $datum = date("Y-m-d H:i:s");
                             <option value="SQL">MySQL</option>
                         </select>
 
-                        <input type="text" name="titel" placeholder="Geef een titel aan" class="mt-5 text-base mb-2.5 leading-5 font-bold ibmText" required>
+                        <input type="text" name="titel" placeholder="Geef een titel aan" class="mt-5 text-base mb-2.5 leading-5 font-bold ibmText pl-2" required>
                         <label class="switch" for="checkbox">
                             <input type="checkbox" id="checkbox" onclick='passwordAan()' />
                             <div class="slider round"></div>
@@ -91,7 +91,7 @@ $datum = date("Y-m-d H:i:s");
                         <input type="text" name="wachtwoord" id="password" value="" placeholder="Geef een wachtwoord" class="mt-7 text-base leading-5 font-bold ibmText" id="">
                         <input type="text" hidden name="url" value="<?= $url ?>">
                         <input type="text" hidden name="datum" value="<?= $datum ?>">
-                        <input type="submit" value="paste" class="bg-gray-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full ibmText">
+                        <input type="submit" value="Paste" class="bg-gray-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mt-4 rounded-full ibmText">
                     </div>
 
                 </div>
