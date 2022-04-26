@@ -5,6 +5,7 @@ include_once './SQL/db_connect.php';
 include './SQL/queries.php';
 include './PHP/functions/url_generator.php';
 include './PHP/functions/datum.php';
+
 ?>
 
 <!-- PHP END -->
@@ -57,6 +58,8 @@ include './PHP/functions/datum.php';
             <?php
             $aute = $db->query("SELECT * FROM `posts` where `wachtwoord` = '' ORDER BY `posts`.`datum` DESC");
             while ($item = $aute->fetch()) {
+                $datum = $item['datum'];
+                $changeDate = date("H:i:s d-m-Y", strtotime($datum));
             ?>
 
                 <div class="container mb80 ibmText">
@@ -75,11 +78,11 @@ include './PHP/functions/datum.php';
                                             <i class="fa fa-code"></i> <?php echo $item['taal'] ?>
                                         </li>
                                         <li class="list-inline-item">
-                                            <i class="fa fa-calendar-o"></i> <?php echo $item['datum'] ?>
+                                            <i class="fa fa-calendar-o"></i> <?php echo $changeDate ?>
                                         </li>
                                     </ul>
-                                    <pre><code class="<?php echo $item['taal'] ?>"><?php echo $item['code'] ?></code></pre><br>
-                                    <a href="view.php?url=<?php echo $item['url'] ?>" class="les-meer">Les meer</a>
+                                    <pre><code class="<?php echo $item['taal'] ?>"><xmp><?php echo $item['code'] ?></xmp></code></pre><br>
+                                    <a href="view.php?url=<?php echo $item['url'] ?>" class="les-meer">Lees meer</a>
                                 </div>
                             </div>
                         </div>

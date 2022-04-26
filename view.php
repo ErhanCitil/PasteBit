@@ -24,7 +24,7 @@ include './PHP/functions/datum.php';
     <title>PasteBit | Public</title>
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/arta.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/arduino-light.min.css">
 </head>
 
 <body>
@@ -52,39 +52,104 @@ include './PHP/functions/datum.php';
             <?php
             $aute = $db->query("SELECT * FROM `posts` WHERE url = '" . $_GET['url'] . "'");
             $item = $aute->fetch();
+            $datum = $item['datum'];
+            $changeDate = date("H:i:s d-m-Y", strtotime($datum));
+
+            if ($item['wachtwoord'] == "") {
             ?>
-            <div class="container mb80 ibmText">
-                <div class="page-timeline">
-                    <div class="vtimeline-point">
-                        <div class="vtimeline-icon">
-                            <i class="fa fa-code" aria-hidden="true"></i>
-                        </div>
-                        <div class="vtimeline-block">
-                            <div class="vtimeline-content">
-                                <a href="view.php?url=<?php echo $item['url'] ?>">
-                                    <h3><?php echo $item['titel'] ?></h3>
-                                </a>
-                                <ul class="post-meta list-inline">
-                                    <li class="list-inline-item">
-                                        <i class="fa fa-code"></i> <?php echo $item['taal'] ?>
-                                    </li>
-                                    <li class="list-inline-item">
-                                        <i class="fa fa-calendar-o"></i> <?php echo $item['datum'] ?>
-                                    </li>
-                                </ul>
-                                <pre><code class="<?php echo $item['taal'] ?>"><?php echo $item['code'] ?></code></pre>
+                <div class="container mb80 ibmText">
+                    <div class="page-timeline">
+                        <div class="vtimeline-point">
+                            <div class="vtimeline-icon">
+                                <i class="fa fa-code" aria-hidden="true"></i>
+                            </div>
+                            <div class="vtimeline-block">
+                                <div class="vtimeline-content">
+                                    <a href="view.php?url=<?php echo $item['url'] ?>">
+                                        <h3><?php echo $item['titel'] ?></h3>
+                                    </a>
+                                    <ul class="post-meta list-inline">
+                                        <li class="list-inline-item">
+                                            <i class="fa fa-code"></i> <?php echo $item['taal'] ?>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <i class="fa fa-calendar-o"></i> <?php echo $changeDate ?>
+                                        </li>
+                                    </ul>
+                                    <pre><code class="<?php echo $item['taal'] ?>"><xmp><?php echo $item['code'] ?></xmp></code></pre>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            <?php
+            } else {
+            ?>
+                <div class="container mb80 ibmText">
+                    <div class="page-timeline">
+                        <div class="vtimeline-point">
+                            <div class="vtimeline-icon">
+                                <i class="fa fa-code" aria-hidden="true"></i>
+                            </div>
+                            <div class="vtimeline-block">
+                                <div class="vtimeline-content">
+                                    <form method="post" action="view.php?url=<?php echo $item['url'] ?>">
+                                        <?php
+                                        if (isset($_POST['submit'])) {
+                                            if ($_POST['wachtwoor'] == $item['wachtwoord']) {
+                                        ?>
+                                                <a href="view.php?url=<?php echo $item['url'] ?>">
+                                                    <h3><?php echo $item['titel'] ?></h3>
+                                                </a>
+                                                <ul class="post-meta list-inline">
+                                                    <li class="list-inline-item">
+                                                        <i class="fa fa-code"></i> <?php echo $item['taal'] ?>
+                                                    </li>
+                                                    <li class="list-inline-item">
+                                                        <i class="fa fa-calendar-o"></i> <?php echo $changeDate ?>
+                                                    </li>
+                                                </ul>
+                                                <pre><code class="<?php echo $item['taal'] ?>"><xmp><?php echo $item['code'] ?></xmp></code></pre>
+                                            <?php
+                                            } else {
+                                                echo "Wachtwoord is incorrect";
+                                            }
+                                        } else {
+                                            ?>
+                                            <input id="wacht" type="password" name="wachtwoor" placeholder="Wachtwoord" autofocus>
+                                            <input id="pas" type="submit" name="submit" value="Paste">
+                                    </form>
+                                <?php
+                                        }
+                                ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <?php
+            }
+            ?>
         </article>
+        <button class="btn-share" type="button" onclick="getURL();"><img class="Share" src="img/share.png" alt=""></button>
 
 
     </section>
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
     <script>
         hljs.highlightAll();
+
+        function getURL() {
+            var dummy = document.createElement('input'),
+                text = window.location.href;
+
+            document.body.appendChild(dummy);
+            dummy.value = text;
+            dummy.select();
+            document.execCommand('copy');
+            document.body.removeChild(dummy);
+            alert("Copied!");
+        }
     </script>
 
 </body>

@@ -3,8 +3,8 @@
 // Inloggegevens
 $host = "localhost";
 $dbname = "pastebit";
-$user = "bit_academy";
-$password = "bit_academy";
+$user = "root";
+$password = "";
 $dsn = "mysql:host=$host;dbname=$dbname";
 // Maak verbinding met DB PasteBit
 try {

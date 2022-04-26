@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Caveat&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap");
 
 html {
   margin: 0;
@@ -19,9 +19,7 @@ body {
   border: 1px solid #eee;
   box-shadow: 1px 1px 0 #ddd;
   vertical-align: top;
-  font-family: "Caveat", cursive;
-  font-size: 24px;
-  line-height: 20px;
+  font-family: "IBM Plex Mono", monospace;
   margin: 2% auto;
   padding: 22px 20px 30vh 1vw;
   resize: none;
@@ -55,10 +53,10 @@ header {
 }
 
 #landing-head h1 {
-    font-size: 90px;
-    font-weight: bold;
-    color: #fff;
-    text-shadow: 0px 8px 13px #000563;
+  font-size: 60px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0px 8px 13px #000563;
 }
 
 .switch {
@@ -95,7 +93,7 @@ header {
 }
 
 input:checked + .slider {
-  background-color: #66bb6a;
+  background-color: #000563;
 }
 
 input:checked + .slider:before {
@@ -111,11 +109,22 @@ input:checked + .slider:before {
 }
 #password {
   display: none;
+  font-family: "IBM Plex Mono", monospace;
+  padding: 5px;
 }
 
 .logo {
   width: 200px;
   margin-top: 5px;
+}
+
+.paste {
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.paste:hover {
+  background-color: #000563;
 }
 
 /*------------ -------------->*/
@@ -164,7 +173,7 @@ input:checked + .slider:before {
 }
 
 .vtimeline-content {
-    width: 550px;
+  width: 550px;
   margin-left: 350px;
   background: #fff;
   border: 1px solid #57be8e;
@@ -246,23 +255,29 @@ h3 {
   margin-bottom: 20px !important;
 }
 
-
-.list-inline-item, .les-meer {
-    color: #57be8e;
+.list-inline-item,
+.les-meer {
+  color: #57be8e;
 }
 
 .les-meer:hover {
-    color: #000;
+  color: #000;
 }
 
 .ibmText {
-    font-family: 'IBM Plex Mono', monospace;
-    font-weight: 400;
-    font-size: 14px;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 400;
+  font-size: 14px;
 }
 
 .ibmHeader {
-    font-family: 'IBM Plex Mono', monospace;
-    font-weight: 500;
-    font-size: 24px;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.titel {
+  font-family: "IBM Plex Mono", monospace;
+  padding: 5px;
+  margin-bottom: 20px;
 }

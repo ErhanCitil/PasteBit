@@ -11,21 +11,18 @@ if (isset($_POST['taal'])) {
     $wachtwoord = $_POST['wachtwoord'];
     $url = $_POST['url'];
 
-    $sqlUpdate = "INSERT INTO posts
-    SET `taal` = '$taal',
-    `titel` = '$titel',
-    `code` = '$code',
-    `datum` = '$datum',
-    `wachtwoord` = '$wachtwoord',
-    `url` = '$url';";
-    $update = $db->query($sqlUpdate);
-    if ($update) {
-        echo '<script>alert("Paste is geplaatst!")</script>';
-        echo "<meta http-equiv='refresh' content='0'>";
-    } else {
-        echo '<script>alert("Paste is niet geplaatst!")</script>';
-        echo "<meta http-equiv='refresh' content='0'>";
-    }
+    $query = $db->prepare("INSERT INTO `posts` (`taal`, `titel`, `code`, `datum`, `wachtwoord`, `url`) VALUES (:taal, :titel, :code, :datum, :wachtwoord, :url)");
+    $query->bindParam(':taal', $taal);
+    $query->bindParam(':titel', $titel);
+    $query->bindParam(':code', $code);
+    $query->bindParam(':datum', $datum);
+    $query->bindParam(':wachtwoord', $wachtwoord);
+    $query->bindParam(':url', $url);
+    $query->execute();
+
+
+    // redirect to view page
+    header('Location: view.php?url=' . $url);
 }
 
 ?>

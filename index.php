@@ -62,7 +62,7 @@ $datum = date("Y-m-d H:i:s");
         <article id="landing-form">
             <form method="POST" id="pasteBinPost" action="index.php">
 
-                <textarea id="code" name="code" class="pasteBinText" placeholder="Typ of plak hier uw code"><</textarea>
+                <textarea id="code" name="code" class="pasteBinText" placeholder="Typ of plak hier uw code" required ></textarea>
 
                 <div class="mt-16 mb-16 w-full flex ml-10">
 
@@ -81,17 +81,18 @@ $datum = date("Y-m-d H:i:s");
                             <option value="CSS">CSS</option>
                             <option value="PHP">PHP</option>
                             <option value="SQL">MySQL</option>
+                            <option value="JavaScript">JavaScript</option>
+                            <option value="koltin">koltin</option>
                         </select>
-
-                        <input type="text" name="titel" placeholder="Geef een titel aan" class="mt-5 text-base mb-2.5 leading-5 font-bold ibmText" required>
+                        <input type="text" name="titel" placeholder="type" class="mt-5 text-base mb-2.5 leading-5 font-bold ibmText titel" required>
                         <label class="switch" for="checkbox">
                             <input type="checkbox" id="checkbox" onclick='passwordAan()' />
                             <div class="slider round"></div>
                         </label>
-                        <input type="text" name="wachtwoord" id="password" value="" placeholder="Geef een wachtwoord" class="mt-7 text-base leading-5 font-bold ibmText" id="">
+                        <input type="text" name="wachtwoord" id="password" value="" placeholder="Wachtwoord" class="mt-7 text-base leading-5 font-bold ibmText" id="">
                         <input type="text" hidden name="url" value="<?= $url ?>">
                         <input type="text" hidden name="datum" value="<?= $datum ?>">
-                        <input type="submit" value="paste" class="bg-gray-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full ibmText">
+                        <input type="submit" value="paste" class="bg-gray-500 text-white font-bold py-2 px-4 rounded-full ibmText paste">
                     </div>
 
                 </div>
