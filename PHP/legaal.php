@@ -16,7 +16,7 @@ include_once '../SQL/db_connect.php';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./CSS/main.css">
+    <link rel="stylesheet" href="test.css">
     <title>Open Source</title>
     <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
@@ -50,24 +50,35 @@ include_once '../SQL/db_connect.php';
     <section class="landing">
 
         <article id="landing-header">
-            <h1>Overzicht van licenties en Open Source onderdelen</h1>
+            <h1 class="font-bold text-xl">Overzicht van licenties en Open Source onderdelen</h1>
+        </article>
+
+        <article id="landing-header" class="mt-4">
+            <h2 class="font-bold text-2xl">Licenties</h2>
+            <p></p>
         </article>
 
         <article id="landing-header">
-            <h2>Licenties</h2>
-            <p>Licenties die gebruikt worden in deze website</p>
-        </article>
+            <div class="mt-4 opensource">
+                <h3 class="font-bold">Opensource</h3>
+                <ol class="pt-2">
+                    <a href="https://codepen.io/AllThingsSmitty/pen/MmxxOz/" target="_blank">Radio button</a>
+                </ol>
+            </div>
 
-        <article id="landing-header">
-            <h2>Open Source</h2>
-            <p>Open Source onderdelen die gebruikt worden in deze website</p>
-            <h3>Design</h3>
-            <ol>
-                <a href="https://codepen.io/AllThingsSmitty/pen/MmxxOz/">Radio button</a>
-            </ol>
-            <h3>Fonts</h3>
-            <ol>
-                <a href="https://fonts.google.com/specimen/Caveat">Caveat</a>
+            <div class="mt-4 opensource">
+                <h3 class="font-bold">Design</h3>
+                <ol class="pt-2">
+                    <a href="https://codepen.io/AllThingsSmitty/pen/MmxxOz/" target="_blank">Radio button</a>
+                </ol>
+            </div>
+
+            <div class="mt-4 opensource">
+                <h3 class="font-bold">Fonts</h3>
+                <ol class="pt-2">
+                    <a href="https://fonts.google.com/specimen/Caveat" target="_blank">Caveat</a>
+                </ol>
+            </div>
         </article>
 
 
