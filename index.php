@@ -9,7 +9,8 @@ include './PHP/functions/datum.php';
 // Variables
 $url = generateUrl();
 $password = generateUrl();
-$datum = date("Y-m-d H:i:s");
+date_default_timezone_set("Europe/Amsterdam");
+$datum = date("Y-m-d H:i:s", time());
 ?>
 
 <!-- PHP END -->
@@ -27,8 +28,6 @@ $datum = date("Y-m-d H:i:s");
     <script src="https://cdn.tailwindcss.com"></script>
     <title>PasteBit</title>
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
-    <!-- favicon komen later -->
-    <!-- OG-tags komen later -->
 </head>
 
 <body>

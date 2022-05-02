@@ -13,3 +13,5 @@ CREATE TABLE `posts` (
     `wachtwoord` VARCHAR(255) NULL,
     `url` VARCHAR(10) NOT NULL
 );
+
+ALTER TABLE `posts` ADD `view` INT(255) NOT NULL ;

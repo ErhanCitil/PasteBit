@@ -2,9 +2,11 @@
 <?php
 // Inloggegevens
 $host = "localhost";
-$dbname = "paste-bit";
-$user = "paste-bit";
-$password = "Gr!dz4r.9F.d3dDGiWpq";
+$dbname = "pastebit";
+// $user = "paste-bit";
+// $password = "Gr!dz4r.9F.d3dDGiWpq";
+$user = "root";
+$password = "";
 $dsn = "mysql:host=$host;dbname=$dbname";
 // Maak verbinding met DB PasteBit
 try {

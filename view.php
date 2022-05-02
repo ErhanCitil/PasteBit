@@ -131,9 +131,31 @@ include './PHP/functions/datum.php';
             }
             ?>
         </article>
-        <button class="btn-share" type="button" onclick="getURL();"><img class="Share" src="img/share.png" alt=""></button>
+        <form class="so" action="view.php?url=<?php echo $item['url'] ?>" method="post">
+            <a id="download" href="download/<?php echo $item['url'] ?>" download="<?php echo $item['titel'] ?>">
+                <i class="fa fa-download" aria-hidden="true"></i>
+                Download
+            </a>
+            <button id="share" class="btn-share" type="button" onclick="getURL();"><i class="fa fa-clipboard" aria-hidden="true"></i> Copy</button>
+            <text id="view" class="btn-view" type="text"><i class="fa fa-eye" aria-hidden="true"></i> <?php echo $item['view'] ?></text>
+ 
+        </form>
+        <?php
 
+        if (true) {
+            $myfile = fopen("download/" . $item["url"], "w") or die("Unable to open file!");
+            $txt = $item['code'];
+            fwrite($myfile, $txt);
+        }
 
+        if (true) {
+            $id = $item['id'];
+            $view = $item['view'] + 1;
+            $query = $db->prepare("UPDATE `posts` SET `view` = :view WHERE `posts`.`id` = $id;)");
+            $query->bindParam(':view', $view);
+            $query->execute();
+        }
+        ?>
     </section>
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
     <script>
