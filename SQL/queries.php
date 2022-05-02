@@ -11,7 +11,7 @@ if (isset($_POST['taal'])) {
     $wachtwoord = $_POST['wachtwoord'];
     $url = $_POST['url'];
 
-    $query = $db->prepare("INSERT INTO `posts` (`taal`, `titel`, `code`, `datum`, `wachtwoord`, `url`) VALUES (:taal, :titel, :code, :datum, :wachtwoord, :url)");
+    $query = $db->prepare("INSERT INTO `posts` (`taal`, `titel`, `code`, `datum`, `wachtwoord`, `url`, `view`) VALUES (:taal, :titel, :code, :datum, :wachtwoord, :url , 1)");
     $query->bindParam(':taal', $taal);
     $query->bindParam(':titel', $titel);
     $query->bindParam(':code', $code);
