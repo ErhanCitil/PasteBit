@@ -1,4 +1,4 @@
-PasteBit Read.me
+**PasteBit Read.me**
 
 PasteBit is een soort online content-hostingservice waar gebruikers platte tekst kunnen opslaan.
 
